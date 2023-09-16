@@ -17,7 +17,7 @@ const HomePage = () => {
       <Header></Header>
       <div className={cl.heroSection}></div>
       <div className={cl.kyrgyzLevels}>
-        <KyrgyzForAdults />
+        <KyrgyzForAdults title={'Балдар үчүн кыргыз тили'}/>
         <KyrgyzForKids title={'Чоңдор үчүн кыргыз тили'}/>
       </div>
       <div className="footer">i3hrfo3hf3op</div>

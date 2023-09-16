@@ -5,6 +5,10 @@
   flex-wrap: wrap;
 }
 
+h1 {
+  margin-bottom: 30px;
+}
+
 .allButtonSection {
   width: 100%;
   height: auto;
