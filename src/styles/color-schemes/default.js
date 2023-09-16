@@ -4,11 +4,13 @@ const GREEN = '#68C052'
 const BLUE = '#58A8F7'
 const BLACK = '#000000'
 const WHITE = '#FFFFFF'
+const RED = '#c41b1b'
 
 export const defaultColorScheme = {
   primary: PRIMARY_COLOR,
   body: '#EEEEEE',
   text: BLACK,
+  error: RED,
   footer: {
     bg: PRIMARY_COLOR,
     text: WHITE,

@@ -4,7 +4,7 @@ import { Container } from "../../styles/adaptive"
 import { LineLink } from "../line-link"
 import { media } from "../../styles/adaptive"
 import { forwardRef } from "react"
-import { FaYoutbe, FaYoutube } from 'react-icons/fa'
+import { FaYoutube } from 'react-icons/fa'
 
 const HeaderWrapper = styled.header`
   background-color: #B3E2FC;

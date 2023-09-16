@@ -10,8 +10,6 @@ const calcMinHeight = ({ $footerH, $headerH }) => {
 }
 
 export const MainContent = styled(Container)`
-  /* padding-top: 40px; */
-  /* padding-bottom: 40px; */
   min-height: ${calcMinHeight};
 `
 
