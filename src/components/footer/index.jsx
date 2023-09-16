@@ -13,7 +13,8 @@ const FooterWrapper = styled.footer`
 const Content = styled(Container)`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100%;
   padding: 40px 0;
@@ -32,7 +33,7 @@ const Content = styled(Container)`
 
 const Center = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `
 const CenterLink = styled(LineLink)`
@@ -44,7 +45,7 @@ export const Footer = forwardRef((props, ref) => {
     <FooterWrapper ref={ref}>
       <Content>
         <Center>
-          <CenterLink to="/">БИЗ ЖӨНҮНДӨ</CenterLink>
+          <LineLink to="/">БИЗ ЖӨНҮНДӨ</LineLink>
           <CenterLink to="/">САБАКТАР</CenterLink>
           <CenterLink to="/">ОЮНДАР</CenterLink>
           <CenterLink to="/">ТАПШЫРМАЛАР</CenterLink>
