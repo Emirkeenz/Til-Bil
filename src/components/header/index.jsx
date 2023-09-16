@@ -4,6 +4,7 @@ import { Container } from "../../styles/adaptive"
 import { LineLink } from "../line-link"
 import { media } from "../../styles/adaptive"
 import { forwardRef } from "react"
+import { FaYoutbe, FaYoutube } from 'react-icons/fa'
 
 const HeaderWrapper = styled.header`
   background-color: #1788C2;
@@ -31,29 +32,15 @@ const Content = styled(Container)`
   `}
 `
 
-const Left = styled.div`
+const Center = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
-// const LogoutButton = styled(Button)`
-//   margin-left: 40px;
-// `
 
-const LeftLink = styled(LineLink)`
+const CenterLink = styled(LineLink)`
   margin-left: 40px;
 `
-
-// const BurgerBtn = styled(Button)`
-    
-//   ${media.xs`
-//     display: flex;
-//     align-items: center;
-//   & svg path:hover {
-//       fill: white;
-//     }
-//   `}
-// `
 
 const MobContent = styled(Container)`
   ${media.xs`
@@ -77,27 +64,18 @@ export const Header = forwardRef((props, ref) => {
   return (
     <HeaderWrapper ref={ref}>
       <Content>
-        <Left>
-          <LeftLink to="/">САБАКТАР</LeftLink>
-          <LeftLink to="/">ОЮНДАР</LeftLink>
-          <LeftLink to="/">ТАПШЫРМАЛАР</LeftLink>
-          <LeftLink to="/">ТИРКЕМЕ</LeftLink>
-        </Left>
-        
-        {/* <div>
-          <LeftLink to="/profile">My Profile</LeftLink>
-          <LogoutButton
-            variant="secondary"
-            onClick={handleLogout}
-          >
-            Log out
-          </LogoutButton>
-        </div> */}
+        <Center>
+          <CenterLink to="/">САБАКТАР</CenterLink>
+          <CenterLink to="/">ОЮНДАР</CenterLink>
+          <CenterLink to="/">ТАПШЫРМАЛАР</CenterLink>
+          <CenterLink to="/">ТИРКЕМЕ</CenterLink>
+          <CenterLink to="/"><FaYoutube size={40} color="red"/></CenterLink>
+        </Center>
+        <Center>
+          <CenterLink to="/">Катталуу</CenterLink>
+          <CenterLink to="/">Кирүү</CenterLink>
+        </Center>
       </Content>
-          {/* <MobContent>
-          <NavLink to="/"><Logo /></NavLink>
-          <BurgerBtn variant="icon" icon={<BurgerIcon />} />
-          </MobContent> */}
     </HeaderWrapper>
   )
 })
