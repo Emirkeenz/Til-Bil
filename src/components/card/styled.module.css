@@ -1,0 +1,12 @@
+.card {
+  width: calc(100% / 4 - 50px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImage {
+  width: 150px;
+  height: 150px;
+  background-color: #ccc;
+}
