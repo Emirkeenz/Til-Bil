@@ -4,3 +4,26 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+.allButtonSection {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.allButton {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  color: #0E5EA3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  border: none;
+  background-color: transparent;
+}

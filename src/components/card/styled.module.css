@@ -1,12 +1,34 @@
 .card {
-  width: calc(100% / 4 - 50px);
+  width: calc(100% / 4 - 25px);
   height: auto;
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 .cardImage {
-  width: 150px;
+  width: 100%;
   height: 150px;
+  border-radius: 10px;
   background-color: #ccc;
+}
+
+.levelButtons {
+  width: 100%;
+  padding: 20px 60px;
+
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  background-color: #68C052;
+}
+
+.cardContext {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px
 }

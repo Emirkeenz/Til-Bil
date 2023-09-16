@@ -1,5 +1,6 @@
 import { Card } from "../card"
 import cl from './styled.module.css'
+import { MdOutlineArrowForwardIos } from 'react-icons/md'
 
 export const KyrgyzForKids = ({title}) => {
   return (
@@ -11,9 +12,9 @@ export const KyrgyzForKids = ({title}) => {
         <Card />
         <Card />
       </div>
-      <div className="allButtonSection">
-        <div className="all">
-          <button>Баары :&#x2192;</button>
+      <div className={cl.allButtonSection}>
+        <div>
+          <button className={cl.allButton}>Баары <MdOutlineArrowForwardIos /></button>
         </div>
       </div>
     </>

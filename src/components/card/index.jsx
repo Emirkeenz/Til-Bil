@@ -6,8 +6,8 @@ export const Card = ({level, description}) => {
       <div className={cl.cardImage}>
 
       </div>
-      <div className="card-context">
-        <button>Б 2 деңгээли</button>
+      <div className={cl.cardContext}>
+        <button className={cl.levelButtons}>Б 2 деңгээли</button>
         <p>Тереңдетилген курс улантуучу</p>
       </div>
     </div>
