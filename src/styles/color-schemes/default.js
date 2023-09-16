@@ -38,9 +38,8 @@ export const defaultColorScheme = {
   //   text: BLACK,
   //   icon: GRAY1,
   // },
-  // about: {
-  //   bg: WHITE,
-  //   text: BLACK,
-  //   border: GRAY1,
-  // }
+  games: {
+    bg: SECONDARY_COLOR,
+    text: BLACK,
+  }
 }

@@ -21,10 +21,10 @@ export const media = Object.keys(breakpoints).reduce((acc, label) => {
 
 export const Container = styled.div`
   width: 100%;
-  padding-right: 15px;
+  /* padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: auto; */
 
   ${media.sm`
     max-width: 540px;
@@ -39,6 +39,6 @@ export const Container = styled.div`
     max-width: 1140px;
   `}
   ${media.xxl`
-    max-width: 1320px;
+    max-width: 1440px;
   `}
 `
