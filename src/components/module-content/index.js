@@ -32,7 +32,7 @@ const StyledModuleContent = styled('div')`
   }
   & .party-funny-emosion {
     position: absolute;
-    top: 75vh;
+    top: 75%;
     left: 35vw;
   }
   & picture {
