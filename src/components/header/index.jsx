@@ -76,8 +76,8 @@ export const Header = forwardRef((props, ref) => {
         </Center>
         <Center>
           <CenterLink to={PATHS.home.lessons.root}>САБАКТАР</CenterLink>
-          <CenterLink to="/">ОЮНДАР</CenterLink>
-          <CenterLink to="/">ТАПШЫРМАЛАР</CenterLink>
+          <CenterLink to="/games">ОЮНДАР</CenterLink>
+          {/* <CenterLink to="/">ТАПШЫРМАЛАР</CenterLink> */}
           <CenterLink to="/">ТИРКЕМЕ</CenterLink>
           <CenterLink to="/">
             <FaYoutube size={40} color="red" />
