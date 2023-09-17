@@ -19,34 +19,32 @@ const FormContainer = styled.form`
   ${media.lg`
     width: 600px;
   `}
-`
+`;
 
 const Title = styled.h1`
   margin-bottom: 30px;
   font-size: 28px;
-`
+`;
 
 const LinkUnder = styled(Link)`
   font-size: 16px;
   margin-top: 30px;
   color: ${({ theme }) => theme.colors.primary};
-`
+`;
 
 const Error = styled.div`
   color: ${({ theme }) => theme.colors.error};
   font-size: 16px;
   margin-top: 20px;
-`
+`;
 
 export const Form = ({ children, error, onSubmit, title, btnText = 'Save', linkUnder }) => {
   return (
-    <FormContainer>
+    <FormContainer onSubmit={onSubmit}>
       {title && <Title>{title}</Title>}
       {children}
       {error && <Error>{error}</Error>}
-      {linkUnder && (
-        <LinkUnder to={linkUnder.path}>{linkUnder.text}</LinkUnder>
-      )}
+      {linkUnder && <LinkUnder to={linkUnder.path}>{linkUnder.text}</LinkUnder>}
     </FormContainer>
-  )
-} 
+  );
+};

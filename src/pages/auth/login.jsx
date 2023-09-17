@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Импорт библиотеки для HTTP запросов
 import { Form } from '../../components/form';
 import { TextField } from '../../components/text-field';
 import styled from 'styled-components';
-import { FcGoogle } from 'react-icons/fc'
+import { FcGoogle } from 'react-icons/fc';
+import axiosInstance from '../../utils/helpers/axios';
 
 const LogButton = styled.button`
   width: 70%;
@@ -15,8 +15,8 @@ const LogButton = styled.button`
   border: none;
   border-radius: 30px;
   color: #fff;
-  background-color: #68C052;
-`
+  background-color: #68c052;
+`;
 
 const LoginWrapper = styled.div`
   width: 50%;
@@ -27,7 +27,7 @@ const LoginWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const GoogleButton = styled.button`
   width: 83%;
@@ -45,19 +45,19 @@ const GoogleButton = styled.button`
 
   font-size: 16px;
   line-height: 24px;
-`
+`;
 
 const ForgotPassword = styled.button`
   margin-right: 0;
   margin-bottom: 15px;
   border: none;
   background-color: transparent;
-`
+`;
 
 const LoginPage = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
-    username: '',
+    email: '',
     password: '',
   });
   const [error, setError] = useState('');
@@ -72,11 +72,11 @@ const LoginPage = () => {
 
     try {
       // Отправка POST запроса к API для входа в систему
-      const response = await axios.post('/api/login', form);
+      const response = await axiosInstance.post('/api/token/', form);
 
       if (response.status === 200) {
         // Успешный вход в систему
-        navigate('/');
+        // navigate('/');
       } else {
         setError('Неверное имя пользователя или пароль');
       }
@@ -88,16 +88,12 @@ const LoginPage = () => {
   return (
     <LoginWrapper>
       <h2>Кош келиңиз!</h2>
-      <GoogleButton><FcGoogle size={30}/> Google менен кирүү</GoogleButton>
+      <GoogleButton>
+        <FcGoogle size={30} /> Google менен кирүү
+      </GoogleButton>
       <Form onSubmit={handleSubmit}>
         <h3>Email</h3>
-        <TextField
-          type="text"
-          name="username"
-          placeholder="username"
-          value={form.username}
-          onChange={handleChange}
-        />
+        <TextField type="text" name="email" placeholder="username" value={form.email} onChange={handleChange} />
         <h3>Сыр сөз</h3>
         <TextField
           type="password"
@@ -109,7 +105,7 @@ const LoginPage = () => {
         <ForgotPassword>Сыр сөзүмдү унуттум</ForgotPassword>
         <LogButton type="submit">Кирүү</LogButton>
       </Form>
-      {error && <p>{error}</p>}
+      {error && <p style={{ color: 'red', padding: '0.5rem 0' }}>{error}</p>}
       <p>
         Сизде аккаунт жокпу ? <a href="/auth/signup">Катталуу</a>
       </p>

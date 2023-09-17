@@ -1,6 +1,6 @@
 import React from 'react';
 import cl from './styled.module.css';
-import { KyrgyzForAdults, ProjectCardItems } from '../../components/card-list-kyrgyzForAdults';
+import { KyrgyzForAdults } from '../../components/card-list-kyrgyzForAdults';
 import { KyrgyzForKids } from '../../components/card-list-kyrgyzForKids';
 import { Header } from '../../components/header';
 import ModuleContent from '../../components/module-content';
