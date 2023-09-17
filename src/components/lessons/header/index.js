@@ -1,4 +1,4 @@
-import { useNavigate, NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { forwardRef } from 'react';
 import { FaYoutube } from 'react-icons/fa';
@@ -17,6 +17,10 @@ const HeaderWrapper = styled.header`
   padding-left: 70px;
   margin-right: auto;
   margin-left: auto;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
 `;
 
 const Content = styled(Container)`
