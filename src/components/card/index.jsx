@@ -1,14 +1,12 @@
 import cl from './styled.module.css'
 
-export const Card = ({level, description}) => {
+export const Card = ({imageSource, level, description}) => {
   return(
     <div className={cl.card}>
-      <div className={cl.cardImage}>
-
-      </div>
+      <img src={imageSource}/>
       <div className={cl.cardContext}>
-        <button className={cl.levelButtons}>Б 2 деңгээли</button>
-        <p>Тереңдетилген курс улантуучу</p>
+        <button className={cl.levelButtons}>{level}</button>
+        <p>{description}</p>
       </div>
     </div>
   )

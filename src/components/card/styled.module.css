@@ -1,16 +1,15 @@
 .card {
-  width: calc(100% / 4 - 25px);
+  width: calc(100% / 4 - 35px);
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.cardImage {
+.card img {
   width: 100%;
-  height: 150px;
-  border-radius: 10px;
-  background-color: #ccc;
+  transform: rotate(8deg);
+  margin-bottom: 25px;
 }
 
 .levelButtons {

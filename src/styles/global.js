@@ -18,4 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     overflow-x: hidden;
   }
+  button, a {
+    cursor: pointer;
+  }
 `;

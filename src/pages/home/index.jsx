@@ -17,9 +17,9 @@ const HomePage = () => {
       <ModuleContent />
 
       <div className={cl.kyrgyzLevels}>
-        <KyrgyzForAdults title={'Балдар үчүн кыргыз тили'} />
+        <KyrgyzForKids title={'Балдар үчүн кыргыз тили'} />
 
-        <KyrgyzForKids title={'Чоңдор үчүн кыргыз тили'} />
+        <KyrgyzForAdults title={'Чоңдор үчүн кыргыз тили'} />
       </div>
 
       <CollectionModule />
