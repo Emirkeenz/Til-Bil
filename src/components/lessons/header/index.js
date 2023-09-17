@@ -1,14 +1,14 @@
 import { useNavigate, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { Container } from '../../styles/adaptive';
-import { LineLink } from '../line-link';
-import { media } from '../../styles/adaptive';
 import { forwardRef } from 'react';
 import { FaYoutube } from 'react-icons/fa';
-import { PATHS } from '../../utils/constants/paths';
+import { Container, media } from '../../../styles/adaptive';
+import { LineLink } from '../../line-link';
+import { PATHS } from '../../../utils/constants/paths';
 
 const HeaderWrapper = styled.header`
-  background-color: #1a88c2;
+  background: #e1f6fd;
+
   width: 100%;
   align-items: center;
   height: 70px;
@@ -45,31 +45,17 @@ const Center = styled.div`
 
 const CenterLink = styled(LineLink)`
   margin-left: 40px;
+  color: #0e5ea3;
 `;
 
-const MobContent = styled(Container)`
-  ${media.xs`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  `}
-  ${media.md`
-    display: none;
-  `}
-`;
-
-export const Header = forwardRef((props, ref) => {
+const Header = forwardRef((props, ref) => {
   const navigate = useNavigate();
-
-  const handleLogout = () => {
-    navigate('/auth/login');
-  };
 
   return (
     <HeaderWrapper ref={ref}>
       <Content>
         <Center>
-          <img src={require('../../images/logo-TilBil.png')} />
+          <img src={require('../../../images/logo-TilBil.png')} />
         </Center>
         <Center>
           <CenterLink to={PATHS.home.lessons}>САБАКТАР</CenterLink>
@@ -88,3 +74,5 @@ export const Header = forwardRef((props, ref) => {
     </HeaderWrapper>
   );
 });
+
+export default Header;
