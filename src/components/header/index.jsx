@@ -75,7 +75,7 @@ export const Header = forwardRef((props, ref) => {
           <img src={LogoTilBil} alt={LogoTilBil} />
         </Center>
         <Center>
-          <CenterLink to={PATHS.home.lessons}>САБАКТАР</CenterLink>
+          <CenterLink to={PATHS.home.lessons.root}>САБАКТАР</CenterLink>
           <CenterLink to="/">ОЮНДАР</CenterLink>
           <CenterLink to="/">ТАПШЫРМАЛАР</CenterLink>
           <CenterLink to="/">ТИРКЕМЕ</CenterLink>
