@@ -58,11 +58,24 @@ const MobContent = styled(Container)`
   }
 `
 
+const AuthButton = styled.button`
+  margin-left: 40px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+`
+
 export const Header = forwardRef((props, ref) => {
   const navigate = useNavigate()
 
-  const handleLogout = () => {
+  const handleLogin = () => {
     navigate('/auth/login')
+  }
+
+  const handleSignUp = () => {
+    navigate('/auth/signup')
   }
 
   return (
@@ -73,14 +86,14 @@ export const Header = forwardRef((props, ref) => {
         </Center>
         <Center>
           <CenterLink to="/">САБАКТАР</CenterLink>
-          <CenterLink to="/">ОЮНДАР</CenterLink>
+          <CenterLink to="/games">ОЮНДАР</CenterLink>
           <CenterLink to="/">ТАПШЫРМАЛАР</CenterLink>
           <CenterLink to="/">ТИРКЕМЕ</CenterLink>
           <CenterLink to="/"><FaYoutube size={40} color="red"/></CenterLink>
         </Center>
         <Center>
-          <CenterLink to="/">Катталуу</CenterLink>
-          <CenterLink to="/">Кирүү</CenterLink>
+          <AuthButton onClick={handleSignUp}>Катталуу</AuthButton>
+          <AuthButton onClick={handleLogin}>Кирүү</AuthButton>
         </Center>
       </Content>
     </HeaderWrapper>

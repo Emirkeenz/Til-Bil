@@ -45,9 +45,8 @@ export const Footer = forwardRef((props, ref) => {
     <FooterWrapper ref={ref}>
       <Content>
         <Center>
-          <LineLink to="/">БИЗ ЖӨНҮНДӨ</LineLink>
           <CenterLink to="/">САБАКТАР</CenterLink>
-          <CenterLink to="/">ОЮНДАР</CenterLink>
+          <CenterLink to="/games">ОЮНДАР</CenterLink>
           <CenterLink to="/">ТАПШЫРМАЛАР</CenterLink>
           <CenterLink to="/">ТИРКЕМЕ</CenterLink>
         </Center>

@@ -7,6 +7,7 @@ import { HeroLayout } from "./components/layout/hero";
 import GamePage from "./pages/games";
 import LoginPage from "./pages/auth/login";
 import SignUpPage from "./pages/auth/sign-up";
+import { AuthLayout } from "./components/layout/auth";
 
 function App() {
   return (
@@ -19,15 +20,13 @@ function App() {
               element={<GamePage />}
             />
           </Route>
-          <Route path="/auth/login" element={<MainLayout />}>
-            <Route
-              index
-              element={<LoginPage />}
+          <Route path="/auth" element={<AuthLayout />}>
+            <Route 
+              path="/auth/login"
+              element={<LoginPage />} 
             />
-          </Route>
-          <Route path="/auth/signup" element={<MainLayout />}>
-            <Route
-              index
+            <Route 
+              path="/auth/signup"
               element={<SignUpPage />}
             />
           </Route>
