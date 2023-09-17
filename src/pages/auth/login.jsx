@@ -76,7 +76,7 @@ const LoginPage = () => {
 
       if (response.status === 200) {
         // Успешный вход в систему
-        // navigate('/');
+        navigate('/');
       } else {
         setError('Неверное имя пользователя или пароль');
       }
