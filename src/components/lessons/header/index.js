@@ -1,10 +1,10 @@
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { forwardRef } from 'react';
 import { FaYoutube } from 'react-icons/fa';
 import { Container, media } from '../../../styles/adaptive';
 import { LineLink } from '../../line-link';
 import { PATHS } from '../../../utils/constants/paths';
+import LogoTilBil from '../../../images/logo-TilBil.png';
 
 const HeaderWrapper = styled.header`
   background: #e1f6fd;
@@ -53,13 +53,11 @@ const CenterLink = styled(LineLink)`
 `;
 
 const Header = forwardRef((props, ref) => {
-  const navigate = useNavigate();
-
   return (
     <HeaderWrapper ref={ref}>
       <Content>
         <Center>
-          <img src={require('../../../images/logo-TilBil.png')} />
+          <img src={LogoTilBil} alt={LogoTilBil} />
         </Center>
         <Center>
           <CenterLink to={PATHS.home.lessons}>САБАКТАР</CenterLink>

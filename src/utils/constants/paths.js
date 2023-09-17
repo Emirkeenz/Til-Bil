@@ -1,5 +1,5 @@
 function path(root, sublink) {
-  return `${root}${sublink}`;
+  return `${root}/${sublink}`;
 }
 
 export const HOME_ROOT_PATH = '/';

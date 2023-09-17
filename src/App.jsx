@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import HomePage from './pages/home';
 import { Theme } from './styles/theme';
 import { MainLayout } from './components/layout/main';
@@ -29,6 +29,7 @@ function App() {
             <Route index element={<HomePage />} />
           </Route>
           <Route path={PATHS.home.lessons.root} element={<Lessons />}>
+            <Route index element={<Navigate to={`${PATHS.home.lessons.onlineLesson}`} />} />
             <Route path={PATHS.home.lessons.savedLessons} element={<SavedLessons />} />
             <Route path={PATHS.home.lessons.onlineLesson} element={<OnlineLessons />} />
           </Route>
