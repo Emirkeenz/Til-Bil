@@ -373,12 +373,12 @@ const OnlineLessons = () => {
                 <div className="chat-user-card">
                   <picture className="user-image">
                     <figure>
-                      <img src={chatAminaUserImage} alt={chatAminaUserImage} />
+                      <img src={chatUserImage} alt={chatUserImage} />
                     </figure>
                   </picture>
 
                   <div className="user-wrapper">
-                    <div className="user-name">Amina</div>
+                    <div className="user-name">Amir</div>
                     <div className="user-time">9:24</div>
                     <div className="message">Hey guys, ооба, бирок мен дагы аракет кылам?</div>
                   </div>
