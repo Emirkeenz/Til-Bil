@@ -1,15 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { Container } from '../../styles/adaptive';
-import { LineLink } from '../line-link';
-import { media } from '../../styles/adaptive';
 import { forwardRef } from 'react';
 import { FaYoutube } from 'react-icons/fa';
-import { PATHS } from '../../utils/constants/paths';
-import LogoTilBil from '../../images/logo-TilBil.png';
+import { Container, media } from '../../../styles/adaptive';
+import { LineLink } from '../../line-link';
+import { PATHS } from '../../../utils/constants/paths';
 
 const HeaderWrapper = styled.header`
-  background-color: #1a88c2;
+  background: #e1f6fd;
+
   width: 100%;
   align-items: center;
   height: 70px;
@@ -18,6 +17,10 @@ const HeaderWrapper = styled.header`
   padding-left: 70px;
   margin-right: auto;
   margin-left: auto;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
 `;
 
 const Content = styled(Container)`
@@ -46,33 +49,17 @@ const Center = styled.div`
 
 const CenterLink = styled(LineLink)`
   margin-left: 40px;
+  color: #0e5ea3;
 `;
 
-const AuthButton = styled.button`
-  margin-left: 40px;
-  border: none;
-  background-color: transparent;
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-`;
-
-export const Header = forwardRef((props, ref) => {
+const Header = forwardRef((props, ref) => {
   const navigate = useNavigate();
-
-  const handleLogin = () => {
-    navigate('/auth/login');
-  };
-
-  const handleSignUp = () => {
-    navigate('/auth/signup');
-  };
 
   return (
     <HeaderWrapper ref={ref}>
       <Content>
         <Center>
-          <img src={LogoTilBil} alt={LogoTilBil} />
+          <img src={require('../../../images/logo-TilBil.png')} />
         </Center>
         <Center>
           <CenterLink to={PATHS.home.lessons}>САБАКТАР</CenterLink>
@@ -84,10 +71,12 @@ export const Header = forwardRef((props, ref) => {
           </CenterLink>
         </Center>
         <Center>
-          <AuthButton onClick={handleSignUp}>Катталуу</AuthButton>
-          <AuthButton onClick={handleLogin}>Кирүү</AuthButton>
+          <CenterLink to="/">Катталуу</CenterLink>
+          <CenterLink to="/">Кирүү</CenterLink>
         </Center>
       </Content>
     </HeaderWrapper>
   );
 });
+
+export default Header;
