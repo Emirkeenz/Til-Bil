@@ -19,10 +19,11 @@ const StyledCollectionModule = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    height: 432px;
+    height: 50%;
     aspect-ratio: 1/2;
     mix-blend-mode: darken;
     transform: rotate(180deg);
+    z-index: -1;
   }
 
   & .content {

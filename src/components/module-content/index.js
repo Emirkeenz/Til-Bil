@@ -26,7 +26,7 @@ const StyledModuleContent = styled('div')`
     position: absolute;
     top: 45%;
     left: 0;
-    height: 432px;
+    height: 50%;
     aspect-ratio: 1/2;
     mix-blend-mode: darken;
   }

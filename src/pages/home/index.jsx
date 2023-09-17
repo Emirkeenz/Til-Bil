@@ -5,6 +5,7 @@ import { KyrgyzForKids } from '../../components/card-list-kyrgyzForKids';
 import { Header } from '../../components/header';
 import ModuleContent from '../../components/module-content';
 import CollectionModule from '../../components/collection-module';
+import HomeFooter from '../../components/home-footer';
 
 const HomePage = () => {
   return (
@@ -23,7 +24,7 @@ const HomePage = () => {
 
       <CollectionModule />
 
-      <div className="footer">i3hrfo3hf3op</div>
+      <HomeFooter />
     </>
   );
 };
